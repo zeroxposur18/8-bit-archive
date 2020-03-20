@@ -15,7 +15,7 @@
 
 ### ***Description***
 
-##### 8-Bins is a video game tracking application that allows anyone to find video games and add them to their collection.
+##### 8-Bit Archive is a video game tracking application that allows anyone to find video games and add them to their collection.
 ***
 
 ### ***Technologies Used***
