@@ -1,4 +1,4 @@
-# 8-Bit-Archive
+# 8-Bit Archive
 
 ### Date: 3/27/2020
 
@@ -31,6 +31,7 @@
 
 ##### Put a short description of how to get started with the app here.
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/8ada8teB/video-game-tracker).
+##### A pitch deck was made for was used to keep track of development progress and can be viewed [here](https://trello.com/b/8ada8teB/video-game-tracker).
 ##### The project itself was deployed using Heroku and can be viewed [here]().
 ***
 
