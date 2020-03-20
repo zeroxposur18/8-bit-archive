@@ -31,7 +31,7 @@
 
 ##### Put a short description of how to get started with the app here.
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/8ada8teB/video-game-tracker).
-##### A pitch deck was made for was used to keep track of development progress and can be viewed [here](https://trello.com/b/8ada8teB/video-game-tracker).
+##### A pitch deck was made to present this project and can be viewed [here](https://docs.google.com/presentation/d/1muVt_wu6NYyIGrlFx8TLKlcdeXdpLRrIhugt0gI5g-M/edit?usp=sharing).
 ##### The project itself was deployed using Heroku and can be viewed [here]().
 ***
 
@@ -43,8 +43,8 @@
 ###### Wireframe
 ![Wireframe](main_app/static/images/concepts/wireframe.png)
 
-###### Screenshot
-![Screenshot]()
+###### Pitch Deck Screenshot
+![Pitch Deck Screenshot](main_app/static/images/concepts/pitch-deck.png)
 ***
 
 ### ***User Experience***
