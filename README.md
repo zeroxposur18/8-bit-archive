@@ -40,7 +40,7 @@
 ![ERD](main_app/static/images/concepts/ERD.png)
 
 ###### Wireframe
-![Wireframe]()
+![Wireframe](main_app/static/images/concepts/wireframe.png)
 
 ###### Screenshot
 ![Screenshot]()
