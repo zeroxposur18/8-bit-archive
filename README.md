@@ -1,4 +1,4 @@
-# 8-Bins
+# 8-Bit-Archive
 
 ### Date: 3/27/2020
 
