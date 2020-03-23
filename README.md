@@ -71,5 +71,5 @@
 
 ### ***Credits***
 
-##### External API: [Internet Gaming Database (IGDB)](https://api.igdb.com/)
+##### External API: [RAWG Database](https://rawg.io/apidocs/)
 ***
