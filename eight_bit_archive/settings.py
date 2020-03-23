@@ -120,4 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL='/collections/'
-LOGOUT_REDIRECT_URL='/home/'
+LOGOUT_REDIRECT_URL='/'

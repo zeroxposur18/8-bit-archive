@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Game
+from django.views.generic.edit import CreateView
+from .models import Game, Collection
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -16,9 +17,10 @@ def about(request):
 def search(request):
     return render(request, 'search.html')   
 
+
 @login_required
 def collections_index(request):
-    games = Game.objects.filter(user=request.user)
+    collections = Collection.objects.filter(user=request.user)
     return render(request, 'collections/index.html', {'collections': collections})
 
 def signup(request):
@@ -34,3 +36,11 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
+class CollectionsCreate(LoginRequiredMixin, CreateView):
+    model = Collection
+    fields = '__all__'
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
