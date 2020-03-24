@@ -1,7 +1,7 @@
 
 # Create your views here.
 from django.shortcuts import render, redirect
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Game, Collection
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -10,6 +10,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Create your views here.
+class CollectionCreate(LoginRequiredMixin, CreateView):
+    model = Collection
+    fields = ['title']
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 def home(request):
     return render(request, 'home.html')
 
@@ -51,10 +59,4 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-class CollectionsCreate(LoginRequiredMixin, CreateView):
-    model = Collection
-    fields = '__all__'
-    
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+
