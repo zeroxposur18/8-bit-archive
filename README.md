@@ -24,8 +24,8 @@
 * ##### CSS
 * ##### JavaScript
 * ##### Python/Django
-* ##### Heroku
 * ##### Postgresql
+* ##### Heroku
 ***
 
 ### ***Getting Started***
