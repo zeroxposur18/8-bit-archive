@@ -53,7 +53,7 @@ def signup(request):
 
 class CollectionsCreate(LoginRequiredMixin, CreateView):
     model = Collection
-    fields = '__all__'
+    fields = ['title']
     
     def form_valid(self, form):
         form.instance.user = self.request.user
