@@ -1,4 +1,15 @@
 {% extends 'base.html' %}
-{% block content%}
-<h1>Index</h1>
+{% block content %}
+
+<h1>Collection List</h1>
+
+{% for collection in collections %}
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ collection.title }}</span>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
 {% endblock %}
