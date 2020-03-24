@@ -51,6 +51,6 @@ class Collection(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("detail", kwargs = {"collection_id": self.id})
+        return reverse('detail', kwargs = {"collection_id": self.id})
     
     
