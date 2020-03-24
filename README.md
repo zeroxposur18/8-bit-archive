@@ -25,6 +25,7 @@
 * ##### JavaScript
 * ##### Python/Django
 * ##### Heroku
+* ##### Postgresql
 ***
 
 ### ***Getting Started***
