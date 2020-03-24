@@ -36,7 +36,7 @@ class Game(models.Model):
     publisher = models.CharField(max_length=50)
     
     def __str__(self):
-        return self.name
+        return self.title
     
     def get_absolute_url(self):
         return reverse("games_detail", kwargs={"game_id": self.id})
@@ -48,9 +48,9 @@ class Collection(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_absolute_url(self):
-        return reverse("detail", kwargs = {"collection_id": self.id})
+        return reverse('detail', kwargs = {"collection_id": self.id})
     
     
