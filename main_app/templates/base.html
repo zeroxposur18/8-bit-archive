@@ -21,6 +21,8 @@
           {% if user.is_authenticated %}
           <li><a href="{% url 'collections_create' %}">+ Collection</a></li>
           <li><a href="{% url 'index' %}">My Collections</a></li>
+          <li><a href="{% url 'games_create' %}">+ Game</a></li>
+          <li><a href="{% url 'games_index' %}">View All Games</a></li>
           <li><a href="{% url 'logout' %}">Log Out</a></li>
           {% else %}
           <li><a href="{% url 'signup' %}">Sign Up</a></li>

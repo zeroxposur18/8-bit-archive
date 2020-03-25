@@ -20,7 +20,6 @@ GENRES = (
     ('Strategy', 'Strategy'),
 )
 
-# Create your models here.
 class Game(models.Model):
     title = models.CharField(max_length=50)
     platform = models.CharField(max_length=50)
@@ -41,7 +40,6 @@ class Game(models.Model):
     def get_absolute_url(self):
         return reverse("games_detail", kwargs={"game_id": self.id})
     
-
 class Collection(models.Model):
     title = models.CharField(max_length=50)
     games = models.ManyToManyField(Game)
@@ -52,5 +50,24 @@ class Collection(models.Model):
 
     def get_absolute_url(self):
         return reverse('detail', kwargs = {"collection_id": self.id})
+
+# class Photo(models.Model):
+#   url = models.CharField(max_length=200)
+#   collection = models.ForeignKey(Collection, on_delete=models.CASCADE)
+#   def __str__(self):
+#       return f"Photo for collection_id: {self.collection_id} @{self.url}"
+
+# class Sighting(models.Model):
+#     date = models.DateField('sighting date')
+#     spot = models.CharField(
+#         max_length=1,
+#         choices=SPOTS,
+#         default=SPOTS[0][0]
+#     )
+#     finch = models.ForeignKey(Finch, on_delete=models.CASCADE)
+
+#     def __str__(self):
+#         return f"{self.get_spot_display()} on {self.date}"
     
-    
+#     class Meta:
+#         ordering = ['-date']
