@@ -38,7 +38,7 @@ class Game(models.Model):
         return self.title
     
     def get_absolute_url(self):
-        return reverse("games_detail", kwargs={"game_id": self.id})
+        return reverse("games_detail", kwargs={"pk": self.id})
     
 class Collection(models.Model):
     title = models.CharField(max_length=50)
