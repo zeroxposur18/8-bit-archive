@@ -18,6 +18,14 @@ class CollectionCreate(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
+class CollectionUpdate(LoginRequiredMixin, UpdateView):
+  model = Collection
+  fields = ['title']
+
+class CollectionDelete(LoginRequiredMixin, DeleteView):
+  model = Collection
+  success_url = '/collections/'
+
 def home(request):
     return render(request, 'home.html')
 
@@ -33,7 +41,10 @@ def collections_index(request):
 def collections_detail(request, collection_id):
   collection = Collection.objects.get(id = collection_id)
   games_collection_doesnt_have = Game.objects.exclude(id__in= collection.games.all().values_list('id'))
-  return render(request, 'collections/detail.html', {'collection': collection, 'games': games_collection_doesnt_have})
+  return render(request, 'collections/detail.html', {
+    'collection': collection, 
+    'games': games_collection_doesnt_have
+    })
 
 @login_required
 def assoc_game(request,collection_id, game_id):
@@ -58,15 +69,3 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
-
-<<<<<<< HEAD
-class CollectionsCreate(LoginRequiredMixin, CreateView):
-    model = Collection
-    fields = ['title']
-    
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
-=======
-
->>>>>>> dde6ce14b3940541943fc7860e176cfbd9a558c2
