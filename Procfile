@@ -1,1 +1,1 @@
-web: gunicorn eight-bit-archive.wsgi
+web: gunicorn eight_bit_archive_two.wsgi
