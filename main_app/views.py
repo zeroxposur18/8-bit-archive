@@ -10,6 +10,9 @@ from .models import Game, Collection, Photo
 import uuid
 import boto3
 
+S3_BASE_URL = 'https://s3-us-east-2.amazonaws.com/'
+BUCKET = '8bitarchive'
+
 class CollectionCreate(LoginRequiredMixin, CreateView):
     model = Collection
     fields = ['title']
