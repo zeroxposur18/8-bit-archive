@@ -62,7 +62,7 @@ def add_photo(request, game_id):
       photo.save()
     except:
       print('An error occurred uploading file to S3')
-  return redirect('detail', pk=game_id)
+  return redirect('games_detail', pk=game_id)
 
 @login_required
 def assoc_game(request,collection_id, game_id):
