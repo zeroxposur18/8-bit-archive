@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> {% endcomment %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>8-bit Archive</title>
@@ -21,6 +21,8 @@
           {% if user.is_authenticated %}
           <li><a href="{% url 'collections_create' %}">+ Collection</a></li>
           <li><a href="{% url 'index' %}">My Collections</a></li>
+          <li><a href="{% url 'games_create' %}">+ Game</a></li>
+          <li><a href="{% url 'games_index' %}">View All Games</a></li>
           <li><a href="{% url 'logout' %}">Log Out</a></li>
           {% else %}
           <li><a href="{% url 'signup' %}">Sign Up</a></li>
