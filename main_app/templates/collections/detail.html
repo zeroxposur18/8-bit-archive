@@ -1,4 +1,80 @@
 {% extends 'base.html' %}
-{% block content%}
-<h1>Detail</h1>
+{% block content %}
+
+<h1>Collection Detail</h1>
+
+<div class="row">
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ collection.title }}</span>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'collections_update' collection.id %}">Edit</a>
+        <a href="{% url 'collections_delete' collection.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col s6">
+    <h3>{{ collection.title }}'s Games</h3>
+    {% if collection.games.count %}
+      {% for game in collection.games.all %}
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              <span style="genre: {{ game.genre }}">{{ game.genre }}</span> {{ game.title }}
+            </span>
+          </div>
+          <div class="card-action">
+            <form action="{% url 'unassoc_game' collection.id game.id %}" method="POST">
+                {% csrf_token %}
+              <button type="submit" class="btn">Remove</button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>No Games</h5>
+    {% endif %}
+  </div>
+  <div class="col s6">
+    <h3>Available Games</h3>
+    {% if games.count %}
+      {% for game in games.all %}
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              <span style="genre: {{ game.genre }}">{{ game.genre }}</span> {{ game.title }}
+            </span>
+          </div>
+          <div class="card-action">
+            <form action="{% url 'assoc_game' collection.id game.id %}" method="POST">
+                {% csrf_token %}
+              <button type="submit" class="btn">Add</button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>{{collection.title}} Has All Available Games</h5>
+    {% endif %}
+  </div>
+</div>
+<br>
+<script>
+var dateEl = document.getElementById('id_date');
+  M.Datepicker.init(dateEl, {
+    format: 'yyyy-mm-dd',
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true
+  });
+
+  var selectEl = document.getElementById('id_spot');
+  M.FormSelect.init(selectEl);
+</script>
+
 {% endblock %}

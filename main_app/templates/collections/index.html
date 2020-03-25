@@ -5,6 +5,7 @@
 
 {% for collection in collections %}
     <div class="card">
+    <a href="{% url 'detail' collection.id %}">
         <div class="card-content">
             <span class="card-title">{{ collection.title }}</span>
         </div>
