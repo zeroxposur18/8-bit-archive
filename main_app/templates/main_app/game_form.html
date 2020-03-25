@@ -17,13 +17,18 @@
   <br>
 
 <script>
-const dateEl = document.getElementById('id_date');
+const dateEl = document.getElementById('id_year');
   M.Datepicker.init(dateEl, {
     format: 'yyyy-mm-dd',
     defaultDate: new Date(),
     setDefaultDate: true,
     autoClose: true
   });
+
+let selectESRB = document.getElementById('id_esrb');
+  M.FormSelect.init(selectESRB);
+let selectGenre = document.getElementById('id_genre');
+  M.FormSelect.init(selectGenre);
 </script>
 
 {% endblock %}

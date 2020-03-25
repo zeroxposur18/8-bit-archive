@@ -55,8 +55,8 @@
 #### User Story #2
 ##### Jennifer is new to video games and wants to keep a list of games that have been recommended by her friends.
 #### As a user...
-* ##### I should be able to create an account with a unique username, name, avatar.
-* ##### I should be able to search for and find a video game.
+* ##### I should be able to create an account with a unique username.
+* ##### I should be able to create a video game.
 * ##### I should be able to create a collection of video games.
 * ##### I should be able to add/remove/update video games in my collection.
 ***
@@ -69,8 +69,8 @@
 - [ ] Allow users to apply category tags to their collections
 - [ ] Add animations/interactive styling
 ***
-
+<!-- 
 ### ***Credits***
 
 ##### External API: [RAWG Database](https://rawg.io/apidocs/)
-***
+*** -->
