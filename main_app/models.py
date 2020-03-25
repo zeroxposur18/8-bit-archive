@@ -51,11 +51,11 @@ class Collection(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs = {"collection_id": self.id})
 
-# class Photo(models.Model):
-#   url = models.CharField(max_length=200)
-#   collection = models.ForeignKey(Collection, on_delete=models.CASCADE)
-#   def __str__(self):
-#       return f"Photo for collection_id: {self.collection_id} @{self.url}"
+class Photo(models.Model):
+  url = models.CharField(max_length=200)
+  game = models.ForeignKey(Game, on_delete=models.CASCADE)
+  def __str__(self):
+      return f"Photo for game_id: {self.game_id} @{self.url}"
 
 # class Sighting(models.Model):
 #     date = models.DateField('sighting date')
