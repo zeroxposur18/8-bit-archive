@@ -1,0 +1,9 @@
+.main {
+    background-image: url("../images/synthwave.jpg");
+    background-size: cover;
+}
+.title {
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
