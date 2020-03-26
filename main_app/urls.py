@@ -1,7 +1,5 @@
 from django.urls import path
 from . import views
-from django.conf import settings
-from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -20,5 +18,5 @@ urlpatterns = [
     path('games/<int:pk>/update/', views.GameUpdate.as_view(), name='games_update'),
     path('games/<int:pk>/delete/', views.GameDelete.as_view(), name='games_delete'),
     path('accounts/signup', views.signup, name='signup'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
 
