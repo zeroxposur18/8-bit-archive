@@ -7,3 +7,15 @@
     font-family: 'Press Start 2P', cursive;
     text-align: center;
 }
+body {
+    background-color: rgb(44, 41, 67);
+    color: #D81B60;
+}
+a {
+    color: #D81B60;
+    text-decoration: none;
+}
+a:hover {
+    color: #F8BBD0;
+    text-decoration: none;
+}
