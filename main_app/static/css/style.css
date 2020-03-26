@@ -19,3 +19,11 @@ a:hover {
     color: #F8BBD0;
     text-decoration: none;
 }
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    color: #F8BBD0;
+}
+.left {
+    font-family: 'Press Start 2P', cursive;
+}
