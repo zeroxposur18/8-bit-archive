@@ -6,9 +6,12 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Game, Collection
-# import uuid
-# import boto3
+from .models import Game, Collection, Photo
+import uuid
+import boto3
+
+S3_BASE_URL = 'https://s3-us-east-2.amazonaws.com/'
+BUCKET = '8bitarchive'
 
 class CollectionCreate(LoginRequiredMixin, CreateView):
     model = Collection
@@ -46,20 +49,20 @@ def collections_detail(request, collection_id):
     'games': games_collection_doesnt_have
     })
 
-# @login_required
-# def add_photo(request, finch_id):
-#   photo_file = request.FILES.get('photo-file', None)
-#   if photo_file:
-#     s3 = boto3.client('s3')
-#     key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
-#     try:
-#       s3.upload_fileobj(photo_file, BUCKET, key)
-#       url = f"{S3_BASE_URL}{BUCKET}/{key}"
-#       photo = Photo(url=url, finch_id=finch_id)
-#       photo.save()
-#     except:
-#       print('An error occurred uploading file to S3')
-#   return redirect('detail', finch_id=finch_id)
+@login_required
+def add_photo(request, game_id):
+  photo_file = request.FILES.get('photo-file', None)
+  if photo_file:
+    s3 = boto3.client('s3')
+    key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+    try:
+      s3.upload_fileobj(photo_file, BUCKET, key)
+      url = f"{S3_BASE_URL}{BUCKET}/{key}"
+      photo = Photo(url=url, game_id=game_id)
+      photo.save()
+    except:
+      print('An error occurred uploading file to S3')
+  return redirect('games_detail', pk=game_id)
 
 @login_required
 def assoc_game(request,collection_id, game_id):
@@ -79,7 +82,11 @@ class GameDetail(LoginRequiredMixin, DetailView):
 
 class GameCreate(LoginRequiredMixin, CreateView):
   model = Game
-  fields = '__all__'
+  fields = ['title', 'platform', 'year', 'genre', 'esrb', 'publisher']
+
+  def form_valid(self,form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 class GameUpdate(LoginRequiredMixin, UpdateView):
   model = Game
