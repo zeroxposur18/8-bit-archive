@@ -71,6 +71,3 @@
 ***
 <!-- 
 ### ***Credits***
-
-##### External API: [RAWG Database](https://rawg.io/apidocs/)
-*** -->
