@@ -38,6 +38,9 @@
 
 ### ***Screenshots***
 
+###### Screenshot of App
+![ERD](main_app/static/images/concepts/ss1.png)
+
 ###### Entity Relationship Diagram
 ![ERD](main_app/static/images/concepts/ERD.png)
 
@@ -71,6 +74,3 @@
 ***
 <!-- 
 ### ***Credits***
-
-##### External API: [RAWG Database](https://rawg.io/apidocs/)
-*** -->
