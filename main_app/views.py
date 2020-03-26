@@ -82,7 +82,11 @@ class GameDetail(LoginRequiredMixin, DetailView):
 
 class GameCreate(LoginRequiredMixin, CreateView):
   model = Game
-  fields = '__all__'
+  fields = ['title', 'platform', 'year', 'genre', 'esrb', 'publisher']
+
+  def form_valid(self,form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 class GameUpdate(LoginRequiredMixin, UpdateView):
   model = Game
