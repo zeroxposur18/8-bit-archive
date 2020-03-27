@@ -1,29 +1,104 @@
-.main {
-    background-image: url("../images/synthwave.jpg");
-    background-size: cover;
+.links {
+    font-family: 'Baloo 2', cursive;
 }
-.title {
+
+.main {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
     color:white;
     font-family: 'Press Start 2P', cursive;
-    text-align: center;
 }
+
+.start {
+    font-size: 2.5vmin;
+    color: white;
+}
+
+.start:hover {
+    color: #D81B60;
+}
+
+.title {
+    color: white;
+    font-size: 5vmin;
+}
+
+.undertitle {
+    color: rgb(232, 232, 232);
+    font-size: 1.75vmin;
+}
+
+.copyright {
+    font-size: 1.5vmin;
+}
+
+.message {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.75vmin;
+}
+
+.prologue {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vmin;
+    padding: 2vmin;
+    border-style: solid;
+    border-color: #D81B60;
+    border-width: .75vmin;
+}
+
+.pagetitle {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: 3vmin;
+}
+
+.subtitle {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vmin;
+    color: rgb(255, 130, 174);
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    color: #D81B60;
+    font-size: 2vmin;
+}
+
+.card {
+    font-family: 'Baloo 2', cursive;
+    padding: .5vmin;
+}
+
+.confirm {
+    font-family: 'Baloo 2', cursive;
+    font-size: 3vmin;
+}
+
 body {
     background-color: rgb(44, 41, 67);
     color: #D81B60;
 }
+
 a {
     color: #D81B60;
     text-decoration: none;
 }
+
 a:hover {
-    color: #F8BBD0;
+    color: rgb(255, 130, 174);
     text-decoration: none;
 }
-h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
-    color: #F8BBD0;
-}
+
 .left {
     font-family: 'Press Start 2P', cursive;
+}
+
+.cardimg {
+    height: 15vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
