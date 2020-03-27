@@ -25,8 +25,9 @@
 * ##### JavaScript
 * ##### Python/Django
 * ##### Postgresql
+* ##### Amazon Web Service S3
+* ##### Materialize 
 * ##### Heroku
-* ##### Amazon Web Service 
 ***
 
 ### ***Getting Started***
@@ -69,6 +70,10 @@
 * ##### I should be able to create a video game.
 * ##### I should be able to create a collection of video games.
 * ##### I should be able to add/remove/update video games in my collection.
+***
+
+### ***Credits***
+##### CSS: [Materialize](https://materializecss.com/)
 ***
 
 ### ***Future Updates***
