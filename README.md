@@ -25,6 +25,7 @@
 * ##### JavaScript
 * ##### Python/Django
 * ##### Postgresql
+* ##### Amazon Web Services S3
 * ##### Heroku
 ***
 
