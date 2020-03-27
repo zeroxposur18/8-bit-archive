@@ -13,7 +13,7 @@
     {% if collection.games.count %}
       {% for game in collection.games.all %}
           <div class="card horizontal indigo lighten-4">
-            <div class="card-image">
+            <div>
               {% for photo in game.photo_set.all %}
                 <img class="cardimg" src="{{photo.url}}">
               {% empty %}
@@ -22,7 +22,7 @@
             </div>
             <div class="card-stacked">
               <div class="card-content">
-                <h4>{{ game.title }}</h4>
+                <h4 class="gametitle">{{ game.title }}</h4>
               </div>
             </div>
           <div class="card-action">
@@ -42,7 +42,7 @@
     {% if games.count %}
       {% for game in games.all %}
         <div class="card horizontal indigo lighten-4">
-          <div class="card-image">
+          <div>
             {% for photo in game.photo_set.all %}
               <img class="cardimg" src="{{photo.url}}">
             {% empty %}
@@ -51,7 +51,7 @@
           </div>
           <div class="card-stacked">
             <div class="card-content">
-              <h4>{{ game.title }}</h4>
+              <h4 class="gametitle">{{ game.title }}</h4>
             </div>
           </div>
           <div class="card-action">

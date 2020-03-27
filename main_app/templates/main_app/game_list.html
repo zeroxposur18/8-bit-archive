@@ -8,7 +8,7 @@
     <a href="{% url 'games_detail' game.id %}">
       <div class="col s6">
         <div class="card horizontal indigo lighten-4">
-          <div class="card-image">
+          <div>
             {% for photo in game.photo_set.all %}
               <img class="cardimg" src="{{photo.url}}">
             {% empty %}

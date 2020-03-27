@@ -10,6 +10,7 @@
 }
 
 .start {
+    font-size: 2.5vmin;
     color: white;
 }
 
@@ -25,6 +26,10 @@
 .undertitle {
     color: rgb(232, 232, 232);
     font-size: 1.75vmin;
+}
+
+.copyright {
+    font-size: 1.5vmin;
 }
 
 .message {
@@ -96,8 +101,4 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.card-image {
-    width: 100px;
 }
