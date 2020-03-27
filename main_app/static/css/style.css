@@ -1,29 +1,71 @@
 .main {
-    background-image: url("../images/synthwave.jpg");
+    background: url("../images/synthwave.jpg") no-repeat center center fixed;
     background-size: cover;
-}
-.title {
     color:white;
     font-family: 'Press Start 2P', cursive;
-    text-align: center;
 }
+
+.start {
+    color: white;
+}
+
+.start:hover {
+    color: #D81B60;
+}
+
+.title {
+    color: white;
+    font-size: 5vmin;
+}
+
+.undertitle {
+    color: rgb(232, 232, 232);
+    font-size: 1.75vmin;
+}
+
+.pagetitle {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: 3vmin;
+}
+
 body {
     background-color: rgb(44, 41, 67);
     color: #D81B60;
 }
+
 a {
     color: #D81B60;
     text-decoration: none;
 }
+
 a:hover {
-    color: #F8BBD0;
+    color: rgb(255, 130, 174);
     text-decoration: none;
 }
-h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
-    color: #F8BBD0;
-}
+
 .left {
     font-family: 'Press Start 2P', cursive;
+}
+
+.cardimg {
+    height: 15vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image {
+    width: 100px;
+}
+
+.prologue {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vmin;
+    padding: 2vmin;
+    border-style: solid;
+    border-color: #D81B60;
 }

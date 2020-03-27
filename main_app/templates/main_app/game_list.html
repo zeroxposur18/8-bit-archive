@@ -1,17 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>List of Games</h1>
+<h1 class="pagetitle">All Games in the 8-bit Archive</h1>
 
-{% for game in game_list %}
-  <a href="{% url 'games_detail' game.id %}">
-    <div class="card">
-        <div class="card-content">
-            <span class="card-title">{{ game.title }}</span>
+<div class="row">
+  {% for game in game_list %}
+    <a href="{% url 'games_detail' game.id %}">
+      <div class="col s6">
+        <div class="card horizontal indigo lighten-4">
+          <div class="card-image">
+            {% for photo in game.photo_set.all %}
+              <img class="cardimg" src="{{photo.url}}">
+            {% empty %}
+              <span class="cardimg">No Image</span>
+            {% endfor %}
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h4>{{ game.title }}</h4>
+            </div>
+          </div>
         </div>
-    </div>
-  </a>
-{% endfor %}
+      </div>
+    </a>
+  {% endfor %}
+</div>
 
 <br>
 
