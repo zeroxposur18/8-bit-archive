@@ -38,9 +38,6 @@
 
 ### ***Screenshots***
 
-###### Screenshot of App
-![ERD](main_app/static/images/concepts/ss1.png)
-
 ###### Entity Relationship Diagram
 ![ERD](main_app/static/images/concepts/ERD.png)
 
@@ -49,6 +46,15 @@
 
 ###### Pitch Deck Screenshot
 ![Pitch Deck Screenshot](main_app/static/images/concepts/pitch-deck.png)
+
+###### About Page
+![About Page](main_app/static/images/screenshots/ss1.png)
+
+###### Add A Game
+![Add A Game](main_app/static/images/screenshots/ss2.png)
+
+###### My Collections
+![My Collections](main_app/static/images/screenshots/ss3.png)
 ***
 
 ### ***User Experience***
@@ -72,5 +78,3 @@
 - [ ] Allow users to apply category tags to their collections
 - [ ] Add animations/interactive styling
 ***
-<!-- 
-### ***Credits***
