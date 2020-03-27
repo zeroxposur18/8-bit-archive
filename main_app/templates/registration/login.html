@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 {% block content%}
-<h1 class="pagetitle">Log In</h1>
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" class="btn" value="login">
-  <input type="hidden" name="next" value="{{ next }}">
-</form>
+
+<center><h1 class="pagetitle">Log In</h1></center>
+
+<div class="card">
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="waves-effect waves-light btn pink darken-2" value="login">
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+</div>
+
 <br>
+
 {% endblock %}

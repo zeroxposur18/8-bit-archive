@@ -1,3 +1,7 @@
+.links {
+    font-family: 'Baloo 2', cursive;
+}
+
 .main {
     background: url("../images/synthwave.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -23,9 +27,45 @@
     font-size: 1.75vmin;
 }
 
+.message {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.75vmin;
+}
+
+.prologue {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vmin;
+    padding: 2vmin;
+    border-style: solid;
+    border-color: #D81B60;
+    border-width: .75vmin;
+}
+
 .pagetitle {
     font-family: 'Press Start 2P', cursive;
     color: white;
+    font-size: 3vmin;
+}
+
+.subtitle {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vmin;
+    color: rgb(255, 130, 174);
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    color: #D81B60;
+    font-size: 2vmin;
+}
+
+.card {
+    font-family: 'Baloo 2', cursive;
+    padding: .5vmin;
+}
+
+.confirm {
+    font-family: 'Baloo 2', cursive;
     font-size: 3vmin;
 }
 
@@ -60,12 +100,4 @@ a:hover {
 
 .card-image {
     width: 100px;
-}
-
-.prologue {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2vmin;
-    padding: 2vmin;
-    border-style: solid;
-    border-color: #D81B60;
 }

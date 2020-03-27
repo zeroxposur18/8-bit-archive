@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2|Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>8-bit Archive</title>
 </head>
@@ -14,11 +14,11 @@
 <header class="navbar-fixed">
     <nav>
       <div class="nav-wrapper #263238 blue-grey darken-4">
-        <ul>
-          <li><a href="/" class="left brand-logo pink-text text-lighten-2">8-bit Archive</a></li>
+        <ul class="left">
+          <li><a href="/" class="logo">8-bit Archive</a></li>
         </ul>
         <ul class="right">
-        <span class="blue-text text-darken-2">
+        <span class="links">
           <li><a href="{% url 'about' %}">About</a></li>
           {% if user.is_authenticated %}
           <li><a href="{% url 'collections_create' %}">+ Collection</a></li>

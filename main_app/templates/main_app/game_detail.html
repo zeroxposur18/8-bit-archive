@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="pagetitle">Game Details</h1>
+<center><h1 class="pagetitle">{{ game.title }} Details</h1></center>
 
 <center>
 <div class="row">
@@ -14,15 +14,19 @@
           {% for photo in game.photo_set.all %}
             <img class="responsive-img card-panel indigo lighten-5" src="{{photo.url}}">
           {% empty %}
-            <div class="card-panel text-pink darken-2 center-align indigo lighten-5">No Cover Image</div>
+            <div class="card-panel text-pink text-darken-2 center-align indigo lighten-5">No Cover Image</div>
           {% endfor %}
         </span>
+           
             <form action="{% url 'add_photo' game.id %}" enctype="multipart/form-data" method="POST" class="card-panel indigo lighten-5">
               {% csrf_token %}
-              <input type="file" name="photo-file">
-              <br><br>
+              <center>
+                <input type="file" name="photo-file">
+              </center>
+              <br>
               <input type="submit" class="waves-effect waves-light btn pink darken-2" value="Upload Cover Image">
             </form>
+          
             <p>Title: {{ game.title }}</p>
             <p>Platform: {{ game.platform }}</p>
             <p>Year: {{ game.year }}</p>
