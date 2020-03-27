@@ -26,6 +26,7 @@
 * ##### Python/Django
 * ##### Postgresql
 * ##### Heroku
+* ##### Amazon Web Service 
 ***
 
 ### ***Getting Started***
