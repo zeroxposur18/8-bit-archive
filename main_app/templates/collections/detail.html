@@ -1,65 +1,69 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Collection Detail</h1>
-
-<div class="row">
-  <div class="col s6">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">{{ collection.title }}</span>
-      </div>
-      <div class="card-action">
-        <a href="{% url 'collections_update' collection.id %}">Edit</a>
-        <a href="{% url 'collections_delete' collection.id %}">Delete</a>
-      </div>
-    </div>
-  </div>
-</div>
+<center><h1 class="pagetitle">{{ collection.title }}</h1>
+<a href="{% url 'collections_update' collection.id %}" class="waves-effect waves-light btn pink darken-2">Edit</a>
+<a href="{% url 'collections_delete' collection.id %}" class="waves-effect waves-light btn pink darken-2">Delete</a>
+</center>
+<br>
 <hr>
 <div class="row">
   <div class="col s6">
-    <h3>{{ collection.title }}'s Games</h3>
+    <center><h4 class="subtitle">Games in Your Collection</h4></center>
     {% if collection.games.count %}
       {% for game in collection.games.all %}
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">
-             {{ game.title }}
-            </span>
-          </div>
+          <div class="card horizontal indigo lighten-4">
+            <div>
+              {% for photo in game.photo_set.all %}
+                <img class="cardimg" src="{{photo.url}}">
+              {% empty %}
+                <span class="cardimg">No Image</span>
+              {% endfor %}
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4 class="gametitle">{{ game.title }}</h4>
+              </div>
+            </div>
           <div class="card-action">
             <form action="{% url 'unassoc_game' collection.id game.id %}" method="POST">
                 {% csrf_token %}
-              <button type="submit" class="btn">Remove</button>
+              <button type="submit" class="waves-effect waves-light btn pink darken-2">Remove</button>
             </form>
           </div>
         </div>
       {% endfor %}
     {% else %}
-      <h5>No Games</h5>
+      <center><h5 class="message">Add Games!</h5></center>
     {% endif %}
   </div>
   <div class="col s6">
-    <h3>Available Games</h3>
+    <center><h4 class="subtitle">Available Games</h4></center>
     {% if games.count %}
       {% for game in games.all %}
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">
-             {{ game.title }}
-            </span>
+        <div class="card horizontal indigo lighten-4">
+          <div>
+            {% for photo in game.photo_set.all %}
+              <img class="cardimg" src="{{photo.url}}">
+            {% empty %}
+              <span class="cardimg">No Image</span>
+            {% endfor %}
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h4 class="gametitle">{{ game.title }}</h4>
+            </div>
           </div>
           <div class="card-action">
             <form action="{% url 'assoc_game' collection.id game.id %}" method="POST">
                 {% csrf_token %}
-              <button type="submit" class="btn">Add</button>
+              <button type="submit" class="waves-effect waves-light btn pink darken-2">Add</button>
             </form>
           </div>
         </div>
       {% endfor %}
     {% else %}
-      <h5>{{collection.title}} Has All Available Games</h5>
+      <center><h5 class="message">No Games to Add!</h5></center>
     {% endif %}
   </div>
 </div>

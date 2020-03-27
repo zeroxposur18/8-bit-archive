@@ -1,16 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Collection List</h1>
+<center><h1 class="pagetitle">My Collections</h1></center>
 
-{% for collection in collections %}
-    <div class="card">
+{% if collections.count %}
+    <div class="row">
+    {% for collection in collections %}
     <a href="{% url 'detail' collection.id %}">
-        <div class="card-content">
-            <span class="card-title">{{ collection.title }}</span>
+        <div class="col s4">
+            <div class="card indigo lighten-4">
+                <div class="card-content">
+                    <span class="card-title">{{ collection.title }}</span>
+                </div>
+            </div>
         </div>
+    </a>
+    {% endfor %}
     </div>
-  </a>
-{% endfor %}
+{% else %}
+    <center><h5 class="message">You haven't added a collection yet!</h5></center>
+{% endif %}
 
 {% endblock %}

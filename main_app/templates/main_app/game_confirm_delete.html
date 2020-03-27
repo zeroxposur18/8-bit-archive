@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-  <h1>Delete A Game</h1>
+  <h1 class="pagetitle">Delete A Game</h1>
 
-  <h4>Are you sure you want to delete <span class="teal-text">{{ object.title }}</span>?</h4>
+  <h4 class="confirm">Are you sure you want to delete <span>{{ object.title }}</span>?</h4>
 
   <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes - Delete" class="btn">
-    <a href="{% url 'games_detail' object.id %}">Cancel</a>
+    <input type="submit" value="Yes" class="waves-effect waves-light btn pink darken-2">
+    <a href="{% url 'games_detail' object.id %}" class="waves-effect waves-light btn pink darken-2">No</a>
   </form>
 
   <br>
