@@ -64,6 +64,10 @@
     font-size: 2vmin;
 }
 
+.gametitle {
+    font-size: 3vmin;
+}
+
 .card {
     font-family: 'Baloo 2', cursive;
     padding: .5vmin;
