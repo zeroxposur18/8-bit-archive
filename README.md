@@ -39,15 +39,6 @@
 
 ### ***Screenshots***
 
-###### Entity Relationship Diagram
-![ERD](main_app/static/images/concepts/ERD.png)
-
-###### Wireframe
-![Wireframe](main_app/static/images/concepts/wireframe.png)
-
-###### Pitch Deck Screenshot
-![Pitch Deck Screenshot](main_app/static/images/concepts/pitch-deck.png)
-
 ###### About Page
 ![About Page](main_app/static/images/screenshots/ss1.png)
 
@@ -56,19 +47,6 @@
 
 ###### My Collections
 ![My Collections](main_app/static/images/screenshots/ss3.png)
-***
-
-### ***User Experience***
-
-#### User Story #1
-##### Billy loves playing video games and wants a place where he can keep track of all of the video games he's played.
-#### User Story #2
-##### Jennifer is new to video games and wants to keep a list of games that have been recommended by her friends.
-#### As a user...
-* ##### I should be able to create an account with a unique username.
-* ##### I should be able to create a video game.
-* ##### I should be able to create a collection of video games.
-* ##### I should be able to add/remove/update video games in my collection.
 ***
 
 ### ***Future Updates***
