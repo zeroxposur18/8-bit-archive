@@ -4,7 +4,7 @@
 
 #### By:
 #### Michael Lackey
-#### [GitHub](https://github.com/mlackey9601) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/)
+#### [Website](https://michaellackey.com/) | [GitHub](https://github.com/mlackey9601) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/) | [GA Profile](https://profiles.generalassemb.ly/michaellackey)
 #### 
 #### Alan McCracken
 #### [GitHub](https://github.com/acmccracken) | [LinkedIn](https://www.linkedin.com/in/alancmccracken/)
@@ -32,8 +32,8 @@
 ### ***Getting Started***
 
 ##### Start off by creating a new user and signing into the app. Once signed in, create a collection and start adding games to it!
-##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/8ada8teB/video-game-tracker).
 ##### A pitch deck was made to present this project and can be viewed [here](https://docs.google.com/presentation/d/1muVt_wu6NYyIGrlFx8TLKlcdeXdpLRrIhugt0gI5g-M/edit?usp=sharing).
+##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/8ada8teB/video-game-tracker).
 ##### The project itself was deployed using Heroku and can be viewed [here](https://eight-bit-archive.herokuapp.com/).
 ***
 
