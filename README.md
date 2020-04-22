@@ -1,4 +1,4 @@
-# 8-Bit Archive
+![8-bit Archive](main_app/static/images/banner.png)
 
 ### Date: 3/27/2020
 
