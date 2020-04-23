@@ -25,7 +25,8 @@
 * ##### JavaScript
 * ##### Python/Django
 * ##### Postgresql
-* ##### Amazon Web Services S3
+* ##### Amazon Web Service S3
+* ##### Materialize 
 * ##### Heroku
 ***
 
@@ -47,6 +48,10 @@
 
 ###### My Collections
 ![My Collections](main_app/static/images/screenshots/ss3.png)
+***
+
+### ***Credits***
+##### CSS: [Materialize](https://materializecss.com/)
 ***
 
 ### ***Future Updates***
