@@ -19,15 +19,7 @@
 ***
 
 ### ***Technologies Used***
-
-* ##### HTML
-* ##### CSS
-* ##### JavaScript
-* ##### Python/Django
-* ##### Postgresql
-* ##### Amazon Web Service S3
-* ##### Materialize 
-* ##### Heroku
+![Technologies Used](main_app/static/images/tech-banner.png)
 ***
 
 ### ***Getting Started***
